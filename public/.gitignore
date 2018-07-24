@@ -1,0 +1,4 @@
+/vendor
+/packages
+/uploads
+!.gitignore
