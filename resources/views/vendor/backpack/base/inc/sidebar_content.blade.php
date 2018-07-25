@@ -11,3 +11,15 @@
         <span>{{ trans('backpack::crud.file_manager') }}</span>
     </a>
 </li>
+<li>
+    <a href='{{ url(config('backpack.base.route_prefix', 'admin') . '/backup') }}'>
+        <i class='fa fa-hdd-o'></i>
+        <span>Backups</span>
+    </a>
+</li>
+<li>
+    <a href='{{ url(config('backpack.base.route_prefix', 'admin') . '/log') }}'>
+        <i class='fa fa-terminal'></i>
+        <span>Logs</span>
+    </a>
+</li>

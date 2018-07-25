@@ -13,6 +13,14 @@ let mix = require('laravel-mix');
 
 mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css');
-mix.copy('resources/assets/css/error.css', 'public/css/error.css');
 mix.copyDirectory('resources/assets/fonts', 'public/fonts');
+mix.copyDirectory('resources/assets/js_raw', 'public/js');
+mix.copyDirectory('resources/assets/css', 'public/css');
+
+
+/**
+ * Mix copy file from Bower component to public folder
+ */
+mix.copyDirectory('bower_components/jquery', 'public/vendor/third-party/jquery');
+mix.copyDirectory('bower_components/jquery-ui', 'public/vendor/third-party/jquery-ui');
 
