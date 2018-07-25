@@ -210,5 +210,6 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
+    'log' => env('APP_LOG', 'daily'),
 
 ];

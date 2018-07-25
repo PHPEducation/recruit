@@ -1,0 +1,8 @@
+{
+  "name": "s4c",
+  "description": "project build by Idist",
+  "license": "MIT",
+  "dependencies": {
+    "jquery-ui": "^1.12.1"
+  }
+}
