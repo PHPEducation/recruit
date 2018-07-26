@@ -12,6 +12,12 @@
     </a>
 </li>
 <li>
+    <a href="{{ url(config('backpack.base.route_prefix') . '/job') }}">
+        <i class="fa fa-file-o"></i>
+        <span>Jobs</span>
+    </a>
+</li>
+<li>
     <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/menu-item') }}">
         <i class="fa fa-list"></i>
         <span>Menu</span>

@@ -11,4 +11,8 @@ Route::group([
     'middleware' => ['web', config('backpack.base.middleware_key', 'admin')],
     'namespace'  => 'App\Http\Controllers\Admin',
 ], function () { // custom admin routes
+
+    Route::resource('job','JobCrudController');
+    Route::post('job/search','JobCrudController@search');
+
 }); // this should be the absolute last line of this file
