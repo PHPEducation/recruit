@@ -19,6 +19,25 @@ trait PageTemplates
     | - page title
     | - page slug
     */
+    private function homepage()
+    {
+
+    }
+
+    private function event()
+    {
+
+    }
+
+    private function list_jobs()
+    {
+
+    }
+
+    private function library()
+    {
+
+    }
 
     private function services()
     {
@@ -68,4 +87,6 @@ trait PageTemplates
             'placeholder' => trans('backpack::pagemanager.content_placeholder'),
         ]);
     }
+
+
 }
