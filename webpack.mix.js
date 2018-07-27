@@ -16,11 +16,26 @@ mix.js('resources/assets/js/app.js', 'public/js')
 mix.copyDirectory('resources/assets/fonts', 'public/fonts');
 mix.copyDirectory('resources/assets/js_raw', 'public/js');
 mix.copyDirectory('resources/assets/css', 'public/css');
+mix.copyDirectory('resources/assets/images', 'public/images');
 
 
 /**
  * Mix copy file from Bower component to public folder
  */
+// Jquery
 mix.copyDirectory('bower_components/jquery', 'public/vendor/third-party/jquery');
+
+// Jquery-UI
 mix.copyDirectory('bower_components/jquery-ui', 'public/vendor/third-party/jquery-ui');
+
+// Bootstrap
+mix.copyDirectory('bower_components/bootstrap/dist', 'public/vendor/third-party/bootstrap');
+
+// Font-awesome
+mix.copyDirectory('bower_components/font-awesome/css', 'public/vendor/third-party/font-awesome/css');
+mix.copyDirectory('bower_components/font-awesome/fonts', 'public/vendor/third-party/font-awesome/fonts');
+
+// Wow.js
+mix.copy('bower_components/wow/dist/wow.js', 'public/vendor/third-party/wow/wow.js');
+mix.copy('bower_components/wow/css/libs/animate.css', 'public/vendor/third-party/wow/animate.css');
 

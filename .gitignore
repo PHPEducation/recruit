@@ -5,6 +5,7 @@
 /public/vendor
 /public/packages
 /public/uploads
+/public/images
 /resources/lang/vendor
 /storage/*.key
 /storage/backups
