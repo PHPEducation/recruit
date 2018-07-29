@@ -608,6 +608,23 @@ a.text-white:hover {
     margin: 18px;
 }
 
+.navbar-brand {
+    transition: all 0.3s;
+}
+
+.navbar-brand:hover {
+    padding: 0 !important;
+}
+
+.navbar-brand:hover .navbar-logo {
+    height: 70px;
+}
+
 .navbar-logo {
-    height:40px;
+    transition: all 0.3s;
+    height: 40px;
+}
+
+.container .section-title {
+    text-align: center;
 }

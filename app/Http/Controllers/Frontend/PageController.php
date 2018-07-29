@@ -33,6 +33,7 @@ class PageController extends Controller
         } else {
             $this->data['title'] = trans('frontend.home.title');
         }
+        $this->data['page'] = $page->withFakes();
 
         return view('frontend.pages.homepage', $this->data);
     }
