@@ -18,6 +18,12 @@
     </a>
 </li>
 <li>
+    <a href="{{ url(config('backpack.base.route_prefix') . '/template_cv') }}">
+        <i class="fa fa-file-o"></i>
+        <span>Template CV</span>
+    </a>
+</li>
+<li>
     <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/menu-item') }}">
         <i class="fa fa-list"></i>
         <span>Menu</span>

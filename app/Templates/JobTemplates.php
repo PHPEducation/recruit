@@ -1,8 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Templates;
 
-trait PageTemplates
+use Illuminate\Support\Facades\Auth;
+
+trait JobTemplates
 {
     /*
     |--------------------------------------------------------------------------
@@ -26,107 +28,57 @@ trait PageTemplates
         $this->crud->addField([   // CustomHTML
             'name' => 'metas_separator',
             'type' => 'custom_html',
-            'value' => '<h2>' . trans('backpack::pagemanager.metas') . '</h2><hr>',
+            'value' => '<h2>' . trans('jobmanager.default.header') . '</h2><hr>',
         ]);
         $this->crud->addField([
-            'name' => 'meta_title',
-            'label' => trans('backpack::pagemanager.meta_title'),
-            'fake' => true,
-            'store_in' => 'extras',
+            'name' => 'is_active',
+            'label' => trans('jobmanager.default.active'),
+            'type' => 'radio',
+            'options' => [
+                0 => 'Deactive',
+                1 => 'Active',
+            ],
+            'inline' => true,
         ]);
         $this->crud->addField([
-            'name' => 'meta_description',
-            'label' => trans('backpack::pagemanager.meta_description'),
-            'fake' => true,
-            'store_in' => 'extras',
+            'name' => 'created_by',
+            'type' => 'hidden',
+            'value' => Auth::user()->id,
         ]);
         $this->crud->addField([
-            'name' => 'meta_keywords',
-            'type' => 'textarea',
-            'label' => trans('backpack::pagemanager.meta_keywords'),
-            'fake' => true,
-            'store_in' => 'extras',
-        ]);
-
-    }
-
-    private function homepage()
-    {
-
-        $this->crud->addField([   // CustomHTML
-            'name' => 'content_separator',
-            'type' => 'custom_html',
-            'value' => '<br><h2>' . trans('backpack::pagemanager.content') . '</h2><hr>',
+            'name' => 'updated_by',
+            'type' => 'hidden',
+            'value' => Auth::user()->id,
         ]);
         $this->crud->addField([
-            'name' => 'content',
-            'label' => trans('backpack::pagemanager.content'),
+            'name' => 'salary',
+            'label' => trans('jobmanager.default.salary'),
+            'type' => 'number',
+            'min' => 0,
+            'max' => 99999999
+        ]);
+        $this->crud->addField([
+            'name' => 'purposes',
+            'label' => trans('jobmanager.default.purposes'),
             'type' => 'wysiwyg',
-            'placeholder' => trans('backpack::pagemanager.content_placeholder'),
         ]);
-    }
 
-    private function event()
-    {
-
-    }
-
-    private function list_jobs()
-    {
-
-    }
-
-    private function library()
-    {
-
-    }
-
-    private function services()
-    {
-        $this->crud->addField([   // CustomHTML
-            'name' => 'metas_separator',
-            'type' => 'custom_html',
-            'value' => '<br><h2>' . trans('backpack::pagemanager.metas') . '</h2><hr>',
-        ]);
         $this->crud->addField([
-            'name' => 'meta_title',
-            'label' => trans('backpack::pagemanager.meta_title'),
-            'fake' => true,
-            'store_in' => 'extras',
-        ]);
-        $this->crud->addField([
-            'name' => 'meta_description',
-            'label' => trans('backpack::pagemanager.meta_description'),
-            'fake' => true,
-            'store_in' => 'extras',
-        ]);
-        $this->crud->addField([
-            'name' => 'meta_keywords',
-            'type' => 'textarea',
-            'label' => trans('backpack::pagemanager.meta_keywords'),
-            'fake' => true,
-            'store_in' => 'extras',
-        ]);
-        $this->crud->addField([   // CustomHTML
-            'name' => 'content_separator',
-            'type' => 'custom_html',
-            'value' => '<br><h2>' . trans('backpack::pagemanager.content') . '</h2><hr>',
-        ]);
-        $this->crud->addField([
-            'name' => 'content',
-            'label' => trans('backpack::pagemanager.content'),
+            'name' => 'description',
             'type' => 'wysiwyg',
-            'placeholder' => trans('backpack::pagemanager.content_placeholder'),
+            'label' => trans('jobmanager.default.description'),
         ]);
-    }
-
-    private function about_us()
-    {
         $this->crud->addField([
-            'name' => 'content',
-            'label' => trans('backpack::pagemanager.content'),
-            'type' => 'wysiwyg',
-            'placeholder' => trans('backpack::pagemanager.content_placeholder'),
+            'name' => 'expire',
+            'label' => trans('jobmanager.default.expire'),
+            'type' => 'datetime',
+            'default' => now(),
         ]);
+        $this->crud->addField([
+           'name' => 'thumbnail',
+           'type' => 'browse',
+           'default' => asset('images/job_default.png'),
+        ]);
+
     }
 }

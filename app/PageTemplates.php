@@ -116,7 +116,7 @@ trait PageTemplates
         $this->crud->addField([
             'name' => 'left_banner_button_link',
             'label' => trans('pagemanager.default.left_banner.button_link'),
-            'type' => 'page_or_link',
+            'type' => 'text',
             'page_model' => '\Backpack\PageManager\app\Models\Page',
             'placeholder' => trans('pagemanager.default.left_banner.button_link_placeholder'),
             'fake' => true,
@@ -183,7 +183,7 @@ trait PageTemplates
         $this->crud->addField([
             'name' => 'right_banner_button_link',
             'label' => trans('pagemanager.default.right_banner.button_link'),
-            'type' => 'page_or_link',
+            'type' => 'text',
             'page_model' => '\Backpack\PageManager\app\Models\Page',
             'placeholder' => trans('pagemanager.default.right_banner.button_link_placeholder'),
             'wrapperAttributes' => [
@@ -306,6 +306,22 @@ trait PageTemplates
     private function list_jobs()
     {
         $this->default();
+        $this->crud->addField([
+            'name' => 'heading',
+            'label' => trans('jobmanager.default.heading'),
+            'type' => 'text',
+            'placeholder' => trans('pagemanager.default.left_banner.title_placeholder'),
+            'fake' => true,
+            'store_in' => 'extras',
+        ]);
+        $this->crud->addField([
+            'name' => 'sub_heading',
+            'label' => trans('jobmanager.default.sub_heading'),
+            'type' => 'text',
+            'placeholder' => trans('pagemanager.default.left_banner.title_placeholder'),
+            'fake' => true,
+            'store_in' => 'extras',
+        ]);
     }
 
     private function library()
@@ -362,5 +378,10 @@ trait PageTemplates
             'type' => 'wysiwyg',
             'placeholder' => trans('backpack::pagemanager.content_placeholder'),
         ]);
+    }
+
+    private function choose_cv()
+    {
+        $this->default();
     }
 }

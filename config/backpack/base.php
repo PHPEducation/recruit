@@ -15,14 +15,14 @@ return [
     'project_name' => 'Backpack',
 
     // Menu logos
-    'logo_lg'   => '<b>Back</b>pack',
-    'logo_mini' => '<b>B</b>p',
+    'logo_lg'   => '<b>S4C</b> Cruit',
+    'logo_mini' => '<b>S4C</b>',
 
     // Developer or company name. Shown in footer.
-    'developer_name' => 'Cristian Tabacitu',
+    'developer_name' => 'IdisT',
 
     // Developer website. Link in footer.
-    'developer_link' => 'http://tabacitu.ro',
+    'developer_link' => 'http://idist.me',
 
     // Show powered by Laravel Backpack in the footer?
     'show_powered_by' => true,

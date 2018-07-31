@@ -8,7 +8,7 @@
             <div id="no-cv" class="wow bounceInLeft">
                 <h2>{!! $page->left_banner_title !!}</h2>
                 <p class="hidden-xs">{!! $page->left_banner_content !!}</p>
-                <a href="{{ $page->left_banner_button_link }}" class="btn-cta"><i
+                <a href="{{  ($page->left_banner_button_link) }}" class="btn-cta"><i
                             class="fa {{ $page->left_banner_button_icon }}" aria-hidden="true"></i>
                     <span>{{ $page->left_banner_button_title }}</span></a>
             </div>
@@ -25,14 +25,16 @@
         <div class="container">
             <h3 class="section-title wow bounceInUp">{{ $page->section_infography_title }}</h3>
             <div class="row">
-                @foreach(json_decode($page->section_inforgraphy_content) as $step)
-                    <div class="col-md-4 step wow bounceInUp">
-                        <a href="{{ $step->link }}" target="_blank">
-                            <img src="{{ $step->thumbnail }}" alt="">
-                            <h4>{{ $step->title }}</h4>
-                        </a>
-                    </div>
-                @endforeach
+                @if($page->section_inforgraphy_content != null)
+                    @foreach(json_decode($page->section_inforgraphy_content) as $step)
+                        <div class="col-md-4 step wow bounceInUp">
+                            <a href="{{ $step->link }}" target="_blank">
+                                <img src="{{ $step->thumbnail }}" alt="">
+                                <h4>{{ $step->title }}</h4>
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
             </div>
         </div>
     </section>
@@ -40,13 +42,15 @@
         <div class="container">
             <h3 class="section-title">{{ $page->section_reason_title }}</h3>
             <div class="row">
-                @foreach(json_decode($page->section_reason_content) as $why)
-                    <div class="col-md-6 item">
-                        <img src="{{ $why->thumbnail }}">
-                        <h5>{{ $why->title }}</h5>
-                        <p>{{ $why->description }}</p>
-                    </div>
-                @endforeach
+                @if($page->section_reason_content != null)
+                    @foreach(json_decode($page->section_reason_content) as $why)
+                        <div class="col-md-6 item">
+                            <img src="{{ $why->thumbnail }}">
+                            <h5>{{ $why->title }}</h5>
+                            <p>{{ $why->description }}</p>
+                        </div>
+                    @endforeach
+                @endif
             </div>
         </div>
     </section>
@@ -54,17 +58,19 @@
         <div class="container">
             <h3 class="section-title">{{ $page->section_member_title }}</h3>
             <div class="row" id="slider">
-                @foreach(json_decode($page->section_member_content) as $member)
-                    <div class="col-md-4">
-                        <div class="item">
-                            <img src="{{ $member->avatar }}">
-                            <h5 class="name">{{ $member->name }}</h5>
-                            <span class="title">{{ $member->position }}</span>
-                            <div class="clearfix"></div>
-                            <p>{{ $member->comment }}</p>
+                @if($page->section_member_content != null)
+                    @foreach(json_decode($page->section_member_content) as $member)
+                        <div class="col-md-4">
+                            <div class="item">
+                                <img src="{{ $member->avatar }}">
+                                <h5 class="name">{{ $member->name }}</h5>
+                                <span class="title">{{ $member->position }}</span>
+                                <div class="clearfix"></div>
+                                <p>{{ $member->comment }}</p>
+                            </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                @endif
             </div>
         </div>
     </section>
