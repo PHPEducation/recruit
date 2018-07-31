@@ -15,6 +15,7 @@ return [
         'active' => 'Active',
         'heading' => 'Heading',
         'sub_heading' => 'Sub Heading',
-    ]
+    ],
+    'apply_button' => 'Xem công việc này',
 
 ];

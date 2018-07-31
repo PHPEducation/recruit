@@ -17,7 +17,7 @@ class PageController extends Controller
         $page = Page::findBySlug($slug);
 
         if (!$page) {
-            abort(404, 'Please go back to our <a href="' . url('') . '">homepage</a>.');
+            abort(404, trans('errors.404.message'));
         }
 
         $this->data['title'] = $page->title;

@@ -383,5 +383,21 @@ trait PageTemplates
     private function choose_cv()
     {
         $this->default();
+        $this->crud->addField([
+            'name' => 'heading',
+            'label' => trans('jobmanager.default.heading'),
+            'type' => 'text',
+            'placeholder' => trans('pagemanager.default.left_banner.title_placeholder'),
+            'fake' => true,
+            'store_in' => 'extras',
+        ]);
+        $this->crud->addField([
+            'name' => 'sub_heading',
+            'label' => trans('jobmanager.default.sub_heading'),
+            'type' => 'text',
+            'placeholder' => trans('pagemanager.default.left_banner.title_placeholder'),
+            'fake' => true,
+            'store_in' => 'extras',
+        ]);
     }
 }

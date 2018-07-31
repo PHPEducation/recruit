@@ -24,7 +24,7 @@
                         </a>
                         <div class="cv-overlay">
                             <a href="{{ $job->getJobLink() }}">
-                                <span>Dùng mẫu này</span>
+                                <span>{{ trans('jobmanager.apply_button') }}</span>
                             </a>
                         </div>
                         <div class="clearfix"></div>
