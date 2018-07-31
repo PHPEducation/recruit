@@ -37,6 +37,46 @@ class SettingsTableSeeder extends Seeder
             'field' => '{"name":"value", "label":"Value", "type":"textarea"}',
             'active' => 1,
         ],
+        [
+            'key' => 'jobs_page',
+            'name' => 'Jobs page',
+            'description' => 'Các jobs available',
+            'value' => '/jobs',
+            'field' => '{"name":"value", "label":"Value", "type":"Value"}',
+            'active' => 1,
+        ],
+        [
+            'key' => 'jobs_page',
+            'name' => 'Jobs page',
+            'description' => 'Các jobs available',
+            'value' => '/jobs',
+            'field' => '{"name":"value", "label":"Value", "type":"Value"}',
+            'active' => 1,
+        ],
+        [
+            'key' => 'cvs_page',
+            'name' => 'Curriculum vitae page',
+            'description' => 'Các CV',
+            'value' => '/list_cv',
+            'field' => '{"name":"value", "label":"Value", "type":"Value"}',
+            'active' => 1,
+        ],
+        [
+            'key' => 'contact_page',
+            'name' => 'Contact page',
+            'description' => 'Contact us',
+            'value' => '/jobs',
+            'field' => '{"name":"value", "label":"Value", "type":"Value"}',
+            'active' => 1,
+        ],
+        [
+            'key' => 'about_page',
+            'name' => 'About page',
+            'description' => 'About us',
+            'value' => '/jobs',
+            'field' => '{"name":"value", "label":"Value", "type":"Value"}',
+            'active' => 1,
+        ],
     ];
 
     public function run()
