@@ -13,6 +13,7 @@ class PageController extends Controller
         if ($slug == null) {
             return $this->getHomePage();
         }
+
         $page = Page::findBySlug($slug);
 
         if (!$page) {

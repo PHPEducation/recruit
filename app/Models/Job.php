@@ -2,13 +2,16 @@
 
 namespace App\Models;
 
+use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
 
 class Job extends Model
 {
     use CrudTrait;
-
+//    use Sluggable;
+    use SluggableScopeHelpers;
     /*
     |--------------------------------------------------------------------------
     | GLOBAL VARIABLES
@@ -22,10 +25,12 @@ class Job extends Model
         'description',
         'purposes',
         'salary',
+        'expire',
         'is_active',
         'created_by',
         'updated_by',
         'deleted_by',
+        'thumbnail',
     ];
 
     /*
@@ -35,12 +40,17 @@ class Job extends Model
     */
     public function getJobLink()
     {
-        return url($this->guard_name);
+        return url('jobs/' . $this->guard_name);
     }
 
     public function getOpenButton()
     {
-        return view('libraries.buttons.open_button',['link'=> $this->getJobLink()]);
+        return view('libraries.buttons.open_button', ['link' => $this->getJobLink()]);
+    }
+
+    public static function findBySlug(string $slug, array $columns = ['*'])
+    {
+        return static::whereGuardName($slug)->first($columns);
     }
     /*
     |--------------------------------------------------------------------------
@@ -53,7 +63,10 @@ class Job extends Model
     | SCOPES
     |--------------------------------------------------------------------------
     */
-
+    public function scopeActive($query)
+    {
+        return $query->where('is_active', 1);
+    }
     /*
     |--------------------------------------------------------------------------
     | ACCESORS
@@ -65,4 +78,17 @@ class Job extends Model
     | MUTATORS
     |--------------------------------------------------------------------------
     */
+    /**
+     * Return the sluggable configuration array for this model.
+     *
+     * @return array
+     */
+    public function sluggable()
+    {
+        if ($this->guard_name != '') {
+            return $this->guard_name;
+        }
+
+        return $this->title;
+    }
 }

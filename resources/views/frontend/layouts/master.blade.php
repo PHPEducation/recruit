@@ -31,14 +31,17 @@
 
 </head>
 <body>
-@include('frontend.layouts.navbar')
-@yield('content')
-@include('frontend.layouts.footer')
+<div id="app">
+    @include('frontend.layouts.navbar')
+    @yield('content')
+    @include('frontend.layouts.footer')
+</div>
 </body>
 
 {{--before script footer--}}
 @yield('before-script-footer')
 {{--end before script footer--}}
+<script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('vendor/third-party/jquery/dist/jquery.js') }}"></script>
 <script>
     new WOW().init();

@@ -2,7 +2,7 @@
     <nav class="navbar navbar-fixed-top navbar-default">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar_menu"
                         aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -13,7 +13,7 @@
                     <img src="{{ Config::get('settings.logo') }}" class="navbar-logo">
                 </a>
             </div>
-            <div id="navbar" class="navbar-collapse collapse">
+            <div id="navbar_menu" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     @if ($menu_items->count())
                         @foreach ($menu_items as $key => $menu_item)

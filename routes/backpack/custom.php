@@ -7,12 +7,16 @@
 // Routes you generate using Backpack\Generators will be placed here.
 
 Route::group([
-    'prefix'     => config('backpack.base.route_prefix', 'admin'),
+    'prefix' => config('backpack.base.route_prefix', 'admin'),
     'middleware' => ['web', config('backpack.base.middleware_key', 'admin')],
-    'namespace'  => 'App\Http\Controllers\Admin',
+    'namespace' => 'App\Http\Controllers\Admin',
 ], function () { // custom admin routes
 
-    Route::resource('job','JobCrudController');
-    Route::post('job/search','JobCrudController@search');
+    Route::resource('job', 'JobCrudController');
+    Route::post('job/search', 'JobCrudController@search');
+
+    Route::resource('template_cv', 'CurriculumVitaeCrudController');
+    Route::post('template_cv/search', 'CurriculumVitaeCrudController@search');
 
 }); // this should be the absolute last line of this file
+
