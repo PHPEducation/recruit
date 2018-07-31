@@ -4,7 +4,7 @@ use Illuminate\Database\Seeder;
 
 class RoleTableSeeder extends Seeder
 {
-    protected $record = [
+    protected $records = [
         [
             'name' => 'Root',
             'guard_name' =>'root',

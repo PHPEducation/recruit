@@ -4,7 +4,7 @@ use Illuminate\Database\Seeder;
 
 class UserTableSeeder extends Seeder
 {
-    protected $record = [
+    protected $records = [
         [
             'name' => 'root',
             'email' => 'root@gmail.com',
@@ -14,6 +14,7 @@ class UserTableSeeder extends Seeder
         ],
         [
             'name' => 'manager1',
+            'email' => 'manager1@gmail.com',
             'is_member' => 1,
             'is_active' => 1,
             'gender' => 1,
@@ -160,10 +161,11 @@ class UserTableSeeder extends Seeder
                 $record['password'] = bcrypt('123456');
                 $record['created_at'] = new DateTime();
                 $record['updated_at'] = new DateTime();
-                \Illuminate\Support\Facades\DB::table('user')->insert($record);
+                \Illuminate\Support\Facades\DB::table('users')->insert($record);
                 $count++;
             }catch (Exception $e){
                 $this->command->info('Record ' . $key . ' fail.');
+                $this->command->error($e->getMessage());
             }
         }
         $this->command->info('Inserted ' . $count . ' records');
