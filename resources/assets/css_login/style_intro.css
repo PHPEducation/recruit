@@ -1,0 +1,494 @@
+@font-face {
+    font-family: opensans;
+    src: url(../fonts/OpenSans-Light.ttf);
+    font-weight: 300
+}
+
+@font-face {
+    font-family: opensans;
+    src: url(../fonts/OpenSans-Regular.ttf);
+    font-weight: 400
+}
+
+@font-face {
+    font-family: opensans;
+    src: url(../fonts/OpenSans-SemiBold.ttf);
+    font-weight: 500
+}
+
+@font-face {
+    font-family: opensans;
+    src: url(../fonts/OpenSans-Bold.ttf);
+    font-weight: 700
+}
+
+#content {
+    font-family: OpenSans
+}
+
+#sub-header a {
+    font-size: 13px
+}
+
+#header .navbar.no-sub-nav {
+    margin-bottom: 0
+}
+
+#sub-navbar ul li a.actived {
+    color: #0ba25e;
+    border-bottom: 1px solid #0ba25e
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-top: 20px
+}
+
+legend {
+    display: block;
+    width: auto;
+    padding: 0 5px;
+    margin-bottom: 0;
+    font-size: inherit;
+    line-height: inherit;
+    border-bottom: 0
+}
+
+.seperator {
+    text-align: center;
+    width: 100px;
+    height: 8px;
+    margin: 30px auto;
+    background-color: #0ba25e
+}
+
+#overview-title {
+    font-size: 30px;
+    font-weight: 400
+}
+
+#overview-content {
+    height: 550px;
+    background: url(../../intro-topcv/images/tong_quan.png) no-repeat center center;
+    position: relative;
+    margin-bottom: 120px
+}
+
+#overview-content .content-box {
+    position: absolute;
+    width: 280px
+}
+
+#topcv-box {
+    top: 150px;
+    left: 100px
+}
+
+#vieclam-box {
+    top: 135px;
+    right: 0
+}
+
+#tuyendung-box {
+    bottom: -50px;
+    right: 40px
+}
+
+.content-box .title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px
+}
+
+.content-box .text {
+    font-size: 15px;
+    font-weight: 400;
+    text-align: justify
+}
+
+.intro-title {
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px
+}
+
+#vision-development .text {
+    font-size: 22px;
+    font-weight: 300;
+    text-align: justify
+}
+
+#su-menh {
+    margin-bottom: 20px
+}
+
+#computer {
+    height: 550px;
+    background: url(../../intro-topcv/images/nhung_con_so.png) no-repeat center center;
+    position: relative
+}
+
+#times {
+    position: relative;
+    text-align: center
+}
+
+#times .time-item {
+    border-top: 2px solid #929090;
+    padding-top: 20px;
+    position: relative;
+    font-size: 20px
+}
+
+.time-item .circle {
+    position: absolute;
+    top: -11px;
+    right: 50%;
+    border: 2px solid #929090;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #f6f6f6
+}
+
+.time-item .month {
+    font-weight: 500
+}
+
+.number-box {
+    position: absolute;
+    width: 280px
+}
+
+.number-box .number {
+    font-size: 50px;
+    font-weight: 500
+}
+
+.number-box .text {
+    font-size: 20px;
+    font-weight: 300
+}
+
+#number-user {
+    top: 30px;
+    left: 0
+}
+
+#number-company {
+    top: 30px;
+    right: 0
+}
+
+#number-success {
+    top: 280px;
+    right: 0
+}
+
+#number-update {
+    top: 280px;
+    left: 0
+}
+
+#event-list {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px
+}
+
+#event-list .event {
+    width: 330px;
+    margin-top: 15px;
+    vertical-align: top;
+    display: inline-block;
+    background-color: #fff;
+    margin-right: 30px;
+    border-radius: 5px;
+    height: 450px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .15)
+}
+
+#event-list .event:hover {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .15)
+}
+
+#event-list .event:last-child {
+    margin-right: 0
+}
+
+#event-list .event-title {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 20px 15px;
+    letter-spacing: -1px
+}
+
+#event-list .event-btn {
+    font-weight: 600;
+    color: #fff;
+    padding: 7px 20px;
+    background-color: #0ba25e;
+    border-radius: 5px
+}
+
+#event-list .event-btn:hover {
+    background-color: #1a8a58
+}
+
+.event-content {
+    margin-top: 30px;
+    font-size: 16px;
+    font-family: OpenSans;
+    font-weight: 400
+}
+
+@media (min-width: 992px) {
+    .modal-lg {
+        width: 1120px
+    }
+
+    .modal-dialog {
+        margin: 100px auto
+    }
+}
+
+.modal-content {
+    border-radius: 10px
+}
+
+.modal-body {
+    padding: 25px;
+    padding-top: 40px;
+    position: relative
+}
+
+.close {
+    float: none;
+    position: absolute;
+    top: 10px;
+    right: 10px
+}
+
+#doi-tac .partner-img, #bao-chi .newspapers-img {
+    height: 100px;
+    line-height: 100px;
+    vertical-align: middle;
+    text-align: center;
+    margin-bottom: 30px
+}
+
+.newspapers-img img {
+    width: 100%
+}
+
+#doi-tac .group-name {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px
+}
+
+.slick-slide img {
+    display: initial
+}
+
+#lien-he {
+    min-height: 600px;
+    background: url(../../intro-topcv/images/hop_tac.png) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    color: #fff;
+    margin-top: 40px
+}
+
+#lien-he .title {
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: OpenSans;
+    margin-bottom: 20px
+}
+
+.hero-mark {
+    min-height: 600px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .65);
+    padding-bottom: 80px;
+    padding-top: 60px
+}
+
+#lien-he legend {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: OpenSans;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase
+}
+
+#lien-he fieldset {
+    text-align: left;
+    font-size: 18px;
+    border: 3px solid #fff;
+    border-radius: 3px;
+    padding: 30px;
+    height: 300px
+}
+
+#lien-he fieldset a {
+    color: #fff
+}
+
+#candidate-field {
+    line-height: 32px
+}
+
+#image-xs {
+    max-width: 100%
+}
+
+.partner-list img {
+    max-width: 100%
+}
+
+@media (max-width: 1199px) {
+    #lien-he legend {
+        font-size: 25px
+    }
+
+    #lien-he fieldset {
+        font-size: 17px
+    }
+}
+
+@media (max-width: 991px) {
+    #image-xs {
+        display: block;
+        margin: 10px auto
+    }
+
+    #image-xs img {
+        width: 400px;
+        max-width: 100%
+    }
+
+    #computer {
+        background: 0 0
+    }
+
+    #overview-content {
+        background: 0 0;
+        height: auto;
+        margin-bottom: 0
+    }
+
+    #overview-content .content-box {
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: justify
+    }
+
+    #topcv-box, #tuyendung-box, #vieclam-box, #number-user, #number-company, #number-success, #number-update {
+        top: initial;
+        left: initial;
+        bottom: initial;
+        right: initial
+    }
+
+    #overview-title {
+        font-size: 25px;
+        font-weight: 400
+    }
+
+    .intro-title {
+        font-size: 25px
+    }
+
+    #vision-development .text {
+        font-size: 15px
+    }
+
+    #thanh-tuu .number-box {
+        width: 100%;
+        position: initial;
+        margin-bottom: 20px
+    }
+
+    #computer {
+        height: auto;
+        margin-bottom: 30px
+    }
+
+    .number-box .number {
+        font-size: 25px
+    }
+
+    .number-box .text {
+        font-size: 15px
+    }
+
+    #times .time-item {
+        font-size: 15px
+    }
+
+    #event-list .event {
+        width: 340px;
+        margin-right: 60px;
+        height: 440px;
+        max-width: 100%
+    }
+
+    #event-list .event-title {
+        font-size: 18px
+    }
+
+    .event-images-wraper {
+        margin-bottom: 10px
+    }
+
+    .event-content {
+        font-size: 15px
+    }
+
+    #doi-tac .group-name {
+        font-size: 15px
+    }
+
+    #lien-he .title {
+        font-size: 25px
+    }
+
+    #lien-he fieldset {
+        font-size: 15px;
+        line-height: initial;
+        height: auto
+    }
+}
+
+@media (max-width: 767px) {
+    #event-list .event {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 350px;
+        height: 450px
+    }
+
+    #event-list .event:last-child {
+        margin-right: auto
+    }
+
+    #event-list .event-title {
+        padding: 20px 18px
+    }
+
+    #lien-he fieldset {
+        font-size: 15px;
+        line-height: initial
+    }
+}
