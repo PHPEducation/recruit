@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class EditJobsTable extends Migration
+class AddThumbnailColumnJobsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class EditJobsTable extends Migration
      */
     public function up()
     {
-        Schema::table('jobs', function (Blueprint $table) {
-//            $table->timestamp('expire')->nullable()->change();
+        Schema::table('jobs', function (Blueprint $table){
+           $table->string('thumbnail');
         });
     }
 
@@ -25,8 +25,8 @@ class EditJobsTable extends Migration
      */
     public function down()
     {
-        Schema::table('jobs', function (Blueprint $table) {
-//            $table->timestamp('expire')->nullable(false)->change();
+        Schema::table('jobs', function (Blueprint $table){
+            $table->dropColumn('thumbnail');
         });
     }
 }
