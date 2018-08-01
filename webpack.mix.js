@@ -39,3 +39,5 @@ mix.copyDirectory('bower_components/font-awesome/fonts', 'public/vendor/third-pa
 mix.copy('bower_components/wow/dist/wow.js', 'public/vendor/third-party/wow/wow.js');
 mix.copy('bower_components/wow/css/libs/animate.css', 'public/vendor/third-party/wow/animate.css');
 
+// curriculum vitae theme
+mix.copyDirectory('resources/assets/curriculum_vitaes_themes/', 'public/curriculum_vitaes_themes/');
