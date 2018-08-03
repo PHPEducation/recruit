@@ -10,7 +10,7 @@ class PageTableSeeder extends Seeder
     protected $records = [
         [
             'template' => 'homepage_default',
-            'name' => 'homepage',
+            'name' => 'Homepage',
             'title' => 'Trang Chủ',
             'slug' => '/',
             'content' => '',
@@ -18,7 +18,7 @@ class PageTableSeeder extends Seeder
         ],
         [
             'template' => 'choose_cv',
-            'name' => 'choose cv',
+            'name' => 'Tạo CV',
             'title' => 'Mẫu CV',
             'slug' => '/cvs',
             'content' => '',
@@ -26,12 +26,12 @@ class PageTableSeeder extends Seeder
         ],
         [
             'template' => 'list_jobs',
-            'name' => 'list job',
+            'name' => 'List Jobs',
             'title' => 'Danh sách các công việc cần nhân sự',
             'slug' => '/jobs',
             'content' => '',
             'extras' => '{"meta_title":"Trang ch\u1ee7 s4c - c\u00e2u l\u1ea1c b\u1ed9 k\u1ef9 n\u0103ng m\u1ec1m","meta_description":"c\u00e2u l\u1ea1c b\u1ed9 k\u0129 n\u0103ng m\u1ec1m S4C","meta_keywords":null,"heading":"C\u00e1c c\u00f4ng vi\u1ec7c \u0111ang c\u1ea7n t\u00ecm nh\u00e2n s\u1ef1","sub_heading":"\u1ee8ng tuy\u1ec3n v\u00e0o b\u1ea5t c\u1ee9 v\u1ecb tr\u00ed n\u00e0o b\u1ea1n mong mu\u1ed1n"}',
-            ],
+        ],
 
     ];
 

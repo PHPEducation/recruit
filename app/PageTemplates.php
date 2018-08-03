@@ -62,7 +62,7 @@ trait PageTemplates
         $this->crud->addField([
             'name' => 'banner_background',
             'label' => trans('pagemanager.default.banner.background'),
-            'type' => 'image',
+            'type' => 'browse',
             'fake' => true,
             'store_in' => 'extras',
         ]);
@@ -130,7 +130,7 @@ trait PageTemplates
             'name' => 'left_banner_background',
             'label' => trans('pagemanager.default.left_banner.background_title'),
             'fake' => true,
-            'type' => 'image',
+            'type' => 'browse',
             'store_in' => 'extras',
         ]);
 
@@ -196,7 +196,7 @@ trait PageTemplates
         $this->crud->addField([
             'name' => 'right_banner_background',
             'label' => trans('pagemanager.default.right_banner.background_title'),
-            'type' => 'image',
+            'type' => 'browse',
             'fake' => true,
             'store_in' => 'extras',
         ]);
