@@ -17,6 +17,7 @@ mix.copyDirectory('resources/assets/fonts', 'public/fonts');
 mix.copyDirectory('resources/assets/js_raw', 'public/js');
 mix.copyDirectory('resources/assets/css', 'public/css');
 mix.copyDirectory('resources/assets/images', 'public/images');
+mix.copyDirectory('resources/assets/css_login', 'public/css_login');
 
 
 /**
