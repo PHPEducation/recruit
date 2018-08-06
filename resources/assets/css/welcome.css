@@ -5,7 +5,10 @@ body {
     color: #333;
     -webkit-font-smoothing: antialiased
 }
-
+body > #app > .container-body{
+    margin-top:70px;
+    margin-bottom: 40px;
+}
 a {
     color: #4a4a4a
 }
@@ -566,7 +569,10 @@ footer .footer-bottom {
     border-top: 1px solid #eee;
     background-color: #fafafa;
     padding-top: 15px;
-    padding-bottom: 5px
+    padding-bottom: 5px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 }
 
 .text-white {

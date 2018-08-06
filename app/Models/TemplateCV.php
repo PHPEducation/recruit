@@ -2,34 +2,32 @@
 
 namespace App\Models;
 
-use Cviebrock\EloquentSluggable\Sluggable;
+use Backpack\CRUD\CrudTrait;
+use Backpack\CRUD\ModelTraits\SpatieTranslatable\Sluggable;
 use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 use Illuminate\Database\Eloquent\Model;
-use Backpack\CRUD\CrudTrait;
+use Illuminate\Support\Facades\Config;
 
-class Job extends Model
+class TemplateCV extends Model
 {
     use CrudTrait;
-//    use Sluggable;
     use SluggableScopeHelpers;
+
     /*
     |--------------------------------------------------------------------------
     | GLOBAL VARIABLES
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'jobs';
+    protected $table = 'template_cvs';
     protected $fillable = [
+        'template',
         'name',
-        'guard_name',
-        'description',
-        'purposes',
-        'salary',
-        'expire',
-        'is_active',
-        'created_by',
-        'updated_by',
-        'deleted_by',
+        'title',
+        'slug',
+        'content',
+        'extras',
+        'path_source',
         'thumbnail',
     ];
 
@@ -38,22 +36,20 @@ class Job extends Model
     | FUNCTIONS
     |--------------------------------------------------------------------------
     */
-    public function getJobLink()
+    public static function findByPath($path)
     {
-        return url('jobs/' . $this->guard_name);
+        $result = self::where('path_source', $path)->first();
+        return $result;
+    }
+
+    public function getCvLink()
+    {
+        return url(Config::get('settings.cvs_page') . $this->slug);
     }
 
     public function getOpenButton()
     {
-        return view('libraries.buttons.open_button', ['link' => $this->getJobLink()]);
-    }
-
-    public static function findBySlug(string $slug, array $columns = ['*'])
-    {
-        return static::whereGuardName($slug)->whereIsActive(1)->expire()->first($columns);
-    }
-    public function scopeExpire($query){
-        return $query->where('expire', '>=', new \DateTime());
+        return view('libraries.buttons.open_button', ['link' => $this->getCvLink()]);
     }
     /*
     |--------------------------------------------------------------------------
@@ -61,18 +57,12 @@ class Job extends Model
     |--------------------------------------------------------------------------
     */
 
-    public function cvs(){
-        return $this->belongsToMany(CurriculumVitae::class);
-    }
     /*
     |--------------------------------------------------------------------------
     | SCOPES
     |--------------------------------------------------------------------------
     */
-    public function scopeActive($query)
-    {
-        return $query->where('is_active', 1);
-    }
+
     /*
     |--------------------------------------------------------------------------
     | ACCESORS
@@ -84,17 +74,19 @@ class Job extends Model
     | MUTATORS
     |--------------------------------------------------------------------------
     */
+    /*
+    |--------------------------------------------------------------------------
+    | MUTATORS
+    |--------------------------------------------------------------------------
+    */
+
     /**
      * Return the sluggable configuration array for this model.
      *
      * @return array
      */
-    public function sluggable()
+    public static function findBySlug($slug)
     {
-        if ($this->guard_name != '') {
-            return $this->guard_name;
-        }
-
-        return $this->title;
+        return self::where('slug', $slug)->first();
     }
 }

@@ -19,8 +19,8 @@ class JobController extends Controller
         if (!$page) {
             abort(404, trans('errors.404.message'));
         }
-
         $this->data['title'] = $page->title;
+        $this->data['page'] = $page;
 
         return view('frontend.jobs.detail', $this->data);
     }

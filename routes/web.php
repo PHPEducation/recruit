@@ -10,12 +10,23 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('demo', function () {
+    return view('frontend.curriculum_vitaes.template');
+});
 
 if (Config::get('settings.cvs_page') != null) {
-    /** CATCH-ALL ROUTE for Backpack/PageManager - needs to be at the end of your routes.php file  **/
-    Route::get(\Illuminate\Support\Facades\Config::get('settings.cvs_page') . '/{subs?}', ['uses' => 'Frontend\CuriculumVitaeController@index'])
-        ->where(['subs' => '.*']);
+    Route::group(['middleware' => 'admin', 'namespace' => 'Frontend', 'prefix' => Config::get('settings.cvs_page')], function () {
+        Route::get('/create', ['as' => 'frontend.cv.create.get', 'uses' => 'CurriculumVitaeController@create']);
+        Route::post('/create/{cv_id}', ['as' => 'frontend.cv.update.post', 'uses' => 'CurriculumVitaeController@update']);
+        Route::get('/edit/{cv_id}', ['as' => 'frontend.cv.edit.get', 'uses' => 'CurriculumVitaeController@edit']);
+        Route::post('/uploads', ['as' => 'front.user.upload.external_sources', 'uses' => 'CurriculumVitaeController@upload_resources']);
+        Route::get('/apply/{job_id}', ['as' => 'frontend.job.apply.get', 'uses' => 'CurriculumVitaeController@apply']);
+        Route::get('/apply/{job_id}/{cv_id}', ['as' => 'frontend.cv.apply.get', 'uses' => 'CurriculumVitaeController@applyCV']);
+        Route::get('/response/{status}', ['as' => 'frontend.jobs.apply.response', 'uses' => 'CurriculumVitaeController@response']);
+
+        Route::get('/{subs?}', ['uses' => 'CurriculumVitaeController@index'])->where(['subs' => '.*']);
+
+    });
 
 }
 
