@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\CurriculumVitae;
 use Backpack\CRUD\CrudTrait;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -34,4 +35,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function cvs(){
+        return $this->hasMany(CurriculumVitae::class, 'user_id' );
+    }
 }

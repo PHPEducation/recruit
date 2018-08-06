@@ -48,5 +48,7 @@ return [
         'error_title' => 'It\'s not you, it\'s me.',
         'message' => 'The server is overloaded or down for maintenance. Please try again later.',
     ],
-    
+    'save_fail' => 'Qúa trình lưu xảy ra lỗi, vui lòng liên hệ admin để được hỗ trợ!',
+    'save_success' => 'Lưu thành công!',
+
 ];

@@ -8,6 +8,8 @@
     "font-awesome": "^4.0.0",
     "slick": "*",
     "wow": "^1.1.2",
-    "ionicons": "^4.2.5"
+    "ionicons": "^4.2.5",
+    "normalize-strings": "normalize#^1.1.0",
+    "jquery": "^3.3.1"
   }
 }

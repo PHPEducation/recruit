@@ -33,7 +33,9 @@
 <body>
 <div id="app">
     @include('frontend.layouts.navbar')
-    @yield('content')
+    <div class="container-body">
+        @yield('content')
+    </div>
     @include('frontend.layouts.footer')
 </div>
 </body>

@@ -17,5 +17,12 @@ return [
         'sub_heading' => 'Sub Heading',
     ],
     'apply_button' => 'Xem công việc này',
+    'frontend' => [
+        'title' => [
+            'description' => 'Thông tin',
+            'purposes' => 'Yêu cầu',
+
+        ]
+    ]
 
 ];

@@ -22,7 +22,7 @@ class PageTableSeeder extends Seeder
             'title' => 'Mẫu CV',
             'slug' => '/cvs',
             'content' => '',
-            'extras' => '{"meta_title":"Trang ch\u1ee7 s4c - c\u00e2u l\u1ea1c b\u1ed9 k\u1ef9 n\u0103ng m\u1ec1m","meta_description":"c\u00e2u l\u1ea1c b\u1ed9 k\u0129 n\u0103ng m\u1ec1m S4C","meta_keywords":"s4c, s4c clb"}',
+            'extras' => '{"meta_title":"Trang ch\u1ee7 s4c - c\u00e2u l\u1ea1c b\u1ed9 k\u1ef9 n\u0103ng m\u1ec1m","meta_description":"c\u00e2u l\u1ea1c b\u1ed9 k\u0129 n\u0103ng m\u1ec1m S4C","meta_keywords":null,"heading":"Danh s\u00e1ch c\u00e1c m\u1eabu CV d\u00e0nh cho b\u1ea1n","sub_heading":"C\u00e1c m\u1eabu CV \u0111u\u1ee3c thi\u1ebft k\u1ebf theo chu\u1ea9n ph\u00f9 h\u1ee3p v\u1edbi t\u1eebng nhu c\u1ea7u"}',
         ],
         [
             'template' => 'list_jobs',
