@@ -37,6 +37,6 @@ class User extends Authenticatable
     ];
 
     public function cvs(){
-        return $this->hasMany(CurriculumVitae::class, 'user_id' );
+        return $this->hasMany(CurriculumVitae::class, 'user_id' )->where('is_active', 1);
     }
 }

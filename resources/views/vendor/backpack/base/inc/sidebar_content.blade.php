@@ -18,9 +18,9 @@
     </a>
 </li>
 <li>
-    <a href="{{ url(config('backpack.base.route_prefix') . '/template_cv') }}">
+    <a href="{{ url(config('backpack.base.route_prefix') . '/apply') }}">
         <i class="fa fa-file-o"></i>
-        <span>Template CV</span>
+        <span>{{ trans('cv.admin.sidebar_menu.title') }}</span>
     </a>
 </li>
 <li>

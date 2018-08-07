@@ -64,6 +64,10 @@ class Job extends Model
     public function cvs(){
         return $this->belongsToMany(CurriculumVitae::class);
     }
+
+    public function apply(){
+        return $this->belongsToMany(Apply::class);
+    }
     /*
     |--------------------------------------------------------------------------
     | SCOPES

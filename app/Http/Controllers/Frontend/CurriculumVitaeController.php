@@ -132,7 +132,6 @@ class CurriculumVitaeController extends Controller
                 break;
             case 'success':
                 return view('frontend.jobs.status.success');
-                return 'success';
                 break;
             case 'fail':
                 return view('frontend.jobs.status.fail');
