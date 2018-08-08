@@ -19,7 +19,7 @@
                     <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 template_cv">
                         <div class="cv-img">
                             <a href="{{ route('frontend.cv.create.get') }}">
-                                <img src="https://www.topcv.vn/images/cv/screenshots/thumbs/vi/mau-cv-classic_1.png" class="img-responsive">
+                                <img src="{{ asset('images/new_cv.jpg') }}" class="img-responsive">
                             </a>
                             <div class="cv-overlay">
                                 <a href="{{ route('frontend.cv.create.get') }}">
@@ -33,7 +33,7 @@
                         <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 template_cv">
                             <div class="cv-img">
                                 <a href="{{ route('frontend.cv.edit.get', ['id' => $cv->id]) }}">
-                                    <img src="{{ $cv->thumbnail }}" class="img-responsive">
+                                    <img src="{{ asset('images/created_cv.png') }}" class="img-responsive">
                                 </a>
                                 <div class="cv-overlay">
                                     <a href="{{ route('frontend.cv.edit.get', ['id' => $cv->id]) }}">

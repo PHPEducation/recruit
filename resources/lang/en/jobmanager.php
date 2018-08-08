@@ -22,7 +22,11 @@ return [
             'description' => 'Thông tin',
             'purposes' => 'Yêu cầu',
 
-        ]
+        ],
+        'apply_button' => 'Nộp CV',
+        'salary' => 'Mức hỗ trợ',
+        'description' => 'Mô tả công việc',
+        'purposes' => 'Yêu cầu của công việc'
     ]
 
 ];

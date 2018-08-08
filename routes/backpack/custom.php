@@ -15,8 +15,12 @@ Route::group([
     Route::resource('job', 'JobCrudController');
     Route::post('job/search', 'JobCrudController@search');
 
-    Route::resource('template_cv', 'CurriculumVitaeCrudController');
-    Route::post('template_cv/search', 'CurriculumVitaeCrudController@search');
+    Route::resource('cv', 'CurriculumVitaeCrudController');
+    Route::post('cv/search', 'CurriculumVitaeCrudController@search');
 
+    Route::resource('apply', 'ApplyCrudController');
+    Route::post('apply/search', 'ApplyCrudController@search');
+    Route::get('apply/review/{id}','ApplyCrudController@detail');
+    Route::get('apply/check/{id}/{status}',['as' => 'admin.apply.cv', 'uses' => 'ApplyCrudController@checkCV']);
 }); // this should be the absolute last line of this file
 

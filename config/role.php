@@ -6,9 +6,9 @@
  * Time: 10:06
  */
 return [
-  'root' => 'root',
-  'manager' => 'manager',
-  'trainer' => 'trainer',
-  'receptionist' => 'receptionist',
-  'applicant' => 'applicant',
+  'root' => 'Root',
+  'manager' => 'Manager',
+  'trainer' => 'Trainer',
+  'receptionist' => 'Receptionist',
+  'applicant' => 'Applicant',
 ];
